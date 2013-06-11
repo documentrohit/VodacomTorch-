@@ -1,0 +1,138 @@
+
+1]-------------------Login Service (POST)-----------------------------------------------------------------------------------------------------------------------------------
+http://localhost/AbfinServiceLayer/AbfinService.svc/Xml/Login
+
+POST DATA
+
+<login><username>munjalrohit</username><password>rohit</password></login>
+
+
+2]--------------GetPassword (GET)---------------------------------------------------------------------------------------------------------------------------------------------
+http://localhost/AbfinServiceLayer/AbfinService.svc/GetPassword/?xml=<getpassword><sessiontoken>125b60c0-694e-4ecf-9cef-7209ed06a8cf</sessiontoken></getpassword>
+
+
+
+
+3]------------Change Password(POST)------------------------------------------------------------------------------------------------------------------------------------------http://localhost/AbfinServiceLayer/AbfinService.svc/ChangePassword
+
+POST DATA
+
+<changepassword><password>rohit1</password><sessiontoken>125b60c0-694e-4ecf-9cef-7209ed06a8cf</sessiontoken></changepassword>
+
+
+
+
+
+4]------------Register User(POST)------------------------------------------------------------------------------------------------------------------------------------------------------
+
+http://localhost/AbfinServiceLayer/AbfinService.svc/CreateUser
+
+
+POST DATA
+
+<createuser>
+<username>munjalrohit</username><password>xyz</password>
+<isadmin>Y</isadmin><email>xyz@ibtechnology.com</email><phone>981321231</phone>
+   <sessiontoken>125b60c0-694e-4ecf-9cef-7209ed06a8cf</sessiontoken>
+</createuser>
+
+
+
+5]---------------Add Abfin Client (POST)--------------------------------------------------------------------------------------------------------------------------------------------
+
+http://localhost/AbfinServiceLayer/AbfinService.svc/AddClient
+
+POST DATA
+
+<addclient>
+	<registrationcode>IB192495</registrationcode>
+               <clientname>cleint XYZ</clientname>
+               <ismandatesigned>Y</ismandatesigned>
+               <mandatesigneddate><![CDATA[2013/05/21]]></mandatesigneddate>
+               <address><![CDATA[563, Ib Technology, gurgaon, Haryana(122016)]]></address>
+               <sessiontoken>125b60c0-694e-4ecf-9cef-7209ed06a8cf</sessiontoken>
+            </addclient>
+
+
+
+6]---------------Add Abfin Client Details (POST)--------------------------------------------------------------------------------------------------------------------------------------------
+
+http://localhost/AbfinServiceLayer/AbfinService.svc/AddClientDetails
+
+POST DATA
+
+
+<clientdetails>
+<clientid>19</clientid>
+<openingbalance>100.56</openingbalance>
+<fundonacess>523.25</fundonacess>
+<ownaccessfacility>Y</ownaccessfacility>
+<balancedate><![CDATA[2013/05/21]]></balancedate>
+<fundtogoonacess>3453.235</fundtogoonacess>
+<fundwithabfin>345634</fundwithabfin>
+<availablefunds>5358.588</availablefunds>
+<sessiontoken>8de4b59b-e46e-4f9f-ac62-20677952a9fd</sessiontoken>
+ </clientdetails>
+
+
+7]-------------------GetClientList  (GET)---------------------------------------------------------------------------------------------------------------
+
+http://localhost/AbfinServiceLayer/AbfinService.svc/getclients?xml=<getclients><sessiontoken>125b60c0-694e-4ecf-9cef-7209ed06a8cf</sessiontoken></getclients>
+
+
+
+
+8]-------------------GetClientSingle(GET)------------------------------------------------------------------------------------------------------------------
+
+http://localhost/AbfinServiceLayer/AbfinService.svc/getclient?xml=<getclient><sessiontoken>2a33bfa6-61f5-4d68-8968-b09b8ff5fc64</sessiontoken><clientid>18</clientid></getclient>
+
+
+
+9]-------------------UpdateClient(POST)------------------------------------------------------------------------------------------------------------------
+
+http://localhost/AbfinServiceLayer/AbfinService.svc/UpdateClient
+
+POST DATA
+
+<updateclient>
+<clientid>18</clientid> 
+<registrationcode>IB192495</registrationcode>
+<clientname>cleint XYZ</clientname>
+<ismandatesigned>Y</ismandatesigned>
+<mandatesigneddate><![CDATA[2013/05/21]]></mandatesigneddate>
+<address><![CDATA[563, Ib Technology, gurgaon, Haryana(122016)]]></address>
+<sessiontoken>125b60c0-694e-4ecf-9cef-7209ed06a8cf</sessiontoken>
+</updateclient>
+
+
+
+10]-------------------DeleteClient(POST)------------------------------------------------------------------------------------------------------------------
+
+http://localhost/AbfinServiceLayer/AbfinService.svc/DeleteClient
+
+POST DATA
+
+ <deleteclient>
+ <clientid>18</clientid> 
+<sessiontoken>125b60c0-694e-4ecf-9cef-7209ed06a8cf</sessiontoken>
+</deleteclient>
+
+
+11]-------------------GetClientDetails(For ALL)(GET)------------------------------------------------------------------------------------------------------------------
+
+http://localhost/AbfinServiceLayer/AbfinService.svc/GetallClientdetails/?xml=
+<getclientdetails>
+<sessiontoken>125b60c0-694e-4ecf-9cef-7209ed06a8cf</sessiontoken>
+</getclientdetails>
+
+
+
+12]-------------------GetClientDetails(For Selected Client)(GET)------------------------------------------------------------------------------------------------------------
+
+http://localhost/AbfinServiceLayer/AbfinService.svc/GetSingleClientDetails/?xml=
+<getclientdetails>
+<sessiontoken>125b60c0-694e-4ecf-9cef-7209ed06a8cf</sessiontoken>
+<clientid>18</clientid>
+</getclientdetails>
+
+
